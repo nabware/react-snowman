@@ -65,6 +65,7 @@ function Snowman({
         <button
             key={ltr}
             value={ltr}
+            className={ltr}
             onClick={handleGuess}
             disabled={guessedLetters.has(ltr)}
         >
@@ -76,6 +77,7 @@ function Snowman({
   return (
       <div className="Snowman">
         <img src={(images)[nWrong]} alt={nWrong} />
+        <p className="number-wrong">Number wrong: {nWrong}.</p>
         <p className="Snowman-word">{guessedWord()}</p>
         <p>{generateButtons()}</p>
       </div>
